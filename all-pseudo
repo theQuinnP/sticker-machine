@@ -1,0 +1,39 @@
+/*
+quinn pearson  |  spring 2024
+qupe8693@colorado.edu
+
+PSEUDO CODE FOR COMBINED STICKER MACHINE ARDUINO
+actual compiled version in all-code
+*/
+  
+  void setup() {
+      Serial.begin(9600);
+      strip.begin(); 
+      strip.show();   
+      pinMode(sensor1_pin, INPUT); 
+      pinMode(sensor2_pin, INPUT); 
+  }
+  
+  void loop() {
+    /*
+     * if IR 1 is TRUE
+     *    first light on
+     *    
+     * if IR 1 is FALSE
+     *    all lights red
+     *    do not allow further actions?
+     * 
+     * if coins detected x4
+     *    second light on
+     *    activate motor
+     *
+     * if sticker detected
+     *    third light on
+     *    unclock crank?
+     *    
+     * if no sticker detected
+     *    all lights red
+     * 
+     */
+  
+  }
