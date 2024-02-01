@@ -1,0 +1,64 @@
+  
+  
+  #include <Adafruit_NeoPixel.h>
+
+  int sensor1_pin = 8;
+  int sensor2_pin = 7;
+  int led_pin = 10;
+  int pix = 3;
+
+  bool sensor1State = false;
+  bool sensor2State = false;
+
+  Adafruit_NeoPixel strip = Adafruit_NeoPixel(pix, LED, NEO_GRB + NEO_KHZ800);
+
+  
+  void setup() {
+    Serial.begin(9600);
+    strip.begin(); 
+    strip.show();   
+    pinMode(sensor1_pin, INPUT); 
+    pinMode(sensor2_pin, INPUT); 
+  }
+
+  
+  void loop() {
+    int sensor1_val = digitalRead(sensor1_pin);
+    int sensor2_val = digitalRead(sensor2_pin);
+
+    Serial.println("sensor 1:  ");
+    Serial.print(sensor1_val);
+    Serial.print("  |  sensor 2:  ");
+    Serial.print(sensor2_val);
+
+    
+
+    if(sensor 1 == true && sensor 2 == true){ 
+      for(i = 0; 1 < pix; i++){
+        strip.setPixelColor(i, 0, 100, 0);
+      }
+      strip.show();
+    }
+    
+    else if(sensor 1 == false && sensor 2 == true){
+      for(i = 0; 1 < pix; i++){
+        strip.setPixelColor(i, 100, 0, 0);
+      }
+      strip.show();
+    }
+
+    else if(sensor 1 == true && sensor 2 == false){
+      for(i = 0; 1 < pix; i++){
+        strip.setPixelColor(i, 0, 0, 100);
+      }
+      strip.show();
+    }
+
+    else if(sensor 1 == false && sensor 2 == false){
+      for(i = 0; 1 < pix; i++){
+        strip.setPixelColor(i, 100, 0, 100);
+      }
+      strip.show();
+    }
+  
+  }
