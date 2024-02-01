@@ -1,0 +1,60 @@
+/*
+quinn pearson  |  spring 2024
+qupe8693@colorado.edu
+
+FOR STICKER MACHINE ARDUINO
+combined code for machine arduino
+to be added to as individual components are completed
+combines:
+  - 
+  -
+  -
+
+*/  
+
+  
+  #include <Adafruit_NeoPixel.h>
+
+  int sensor1_pin = 8;
+  int sensor2_pin = 7;
+  int led_pin = 10;
+  int motor_pin = 9;
+  int pix = 3;
+
+  bool sensor1State = false;
+  bool sensor2State = false;
+
+  Adafruit_NeoPixel strip = Adafruit_NeoPixel(pix, LED, NEO_GRB + NEO_KHZ800);
+
+  
+  void setup() {
+      Serial.begin(9600);
+      strip.begin(); 
+      strip.show();   
+      pinMode(sensor1_pin, INPUT); 
+      pinMode(sensor2_pin, INPUT); 
+  }
+  
+  void loop() {
+    /*
+     * if IR 1 is TRUE
+     *    first light on
+     *    
+     * if IR 1 is FALSE
+     *    all lights red
+     *    do not allow further actions?
+     * 
+     * if coins detected x4
+     *    second light on
+     *    activate motor
+     *
+     * if sticker detected
+     *    third light on
+     *    unclock crank?
+     *    
+     * if no sticker detected
+     *    all lights red
+     * 
+     */
+  
+  }
