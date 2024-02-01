@@ -1,4 +1,13 @@
-  
+/*
+quinn pearson  |  spring 2024
+qupe8693@colorado.edu
+
+FOR STICKER MACHINE ARDUINO
+code for IR test w/ leds denoting which sensors are triggered
+will nit be final code, just a test
+
+actual compiled version in all-code
+*/  
   
   #include <Adafruit_NeoPixel.h>
 
